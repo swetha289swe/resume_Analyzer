@@ -6,6 +6,66 @@
 <title>0 to shipped resume parser</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <div class="logo">0 to <span>shipped</span></div>
+    <a href="#upload">Try it free</a>
+  </nav>
+
+  <h1>Resume parser</h1>
+  <p class="lede">Upload your resume as a PDF. See your score, the skills we found, and the ones a hiring manager will look for that aren't there yet.</p>
+
+  <div class="journey" aria-hidden="true">
+    <div class="ends"><span>0</span><span>shipped</span></div>
+    <div class="rail">
+      <div class="fill" id="fill"></div><div class="pin" id="pin"></div>
+      <span class="tick" style="left:50%">50</span>
+    </div>
+  </div>
+
+  <section id="upload">
+    <label class="drop" id="drop">
+      <strong>Drop your resume here</strong>
+      <small>or click to choose a PDF, up to 5 MB</small>
+      <input type="file" id="file" accept="application/pdf,.pdf">
+    </label>
+    <div class="alt">No resume handy? <button class="link" id="sample" type="button">Use a sample</button></div>
+    <div class="err" id="err" role="alert"></div>
+
+    <div id="loading" role="status"><div id="lt">Reading your resume</div><span id="ls">Extracting text</span></div>
+
+    <div id="result" aria-live="polite">
+      <p class="file" id="fname"></p>
+      <div class="score"><b id="num">0</b><i>out of 100</i></div>
+      <p class="verdict" id="verdict"></p>
+      <div class="cols">
+        <div class="panel"><h2>Skills found</h2><p id="havec"></p><ul class="chips have" id="have"></ul></div>
+        <div class="panel"><h2>Skills missing</h2><p id="lackc"></p><ul class="chips lack" id="lack"></ul></div>
+      </div>
+      <button class="reset" id="reset" type="button">Check another resume</button>
+    </div>
+  </section>
+
+  <footer>Demo only. Your file never leaves this page, and the score is a mock.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>0 to shipped resume parser</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#EEF1F4; --surface:#FFFFFF; --ink:#0F1B2D; --muted:#5B677A; --line:#D5DBE3;
@@ -199,4 +259,4 @@ footer{margin-top:80px;color:var(--muted);font-size:14px}
 })();
 </script>
 </body>
-</html>
+</html> -->
